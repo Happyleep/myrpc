@@ -1,0 +1,13 @@
+/data/project/mprpc/myRpc/build/CMakeFiles/edit_cache.dir
+/data/project/mprpc/myRpc/build/CMakeFiles/rebuild_cache.dir
+/data/project/mprpc/myRpc/build/src/CMakeFiles/rpc_core.dir
+/data/project/mprpc/myRpc/build/src/CMakeFiles/edit_cache.dir
+/data/project/mprpc/myRpc/build/src/CMakeFiles/rebuild_cache.dir
+/data/project/mprpc/myRpc/build/example/CMakeFiles/edit_cache.dir
+/data/project/mprpc/myRpc/build/example/CMakeFiles/rebuild_cache.dir
+/data/project/mprpc/myRpc/build/example/callee/CMakeFiles/server.dir
+/data/project/mprpc/myRpc/build/example/callee/CMakeFiles/edit_cache.dir
+/data/project/mprpc/myRpc/build/example/callee/CMakeFiles/rebuild_cache.dir
+/data/project/mprpc/myRpc/build/example/caller/CMakeFiles/client.dir
+/data/project/mprpc/myRpc/build/example/caller/CMakeFiles/edit_cache.dir
+/data/project/mprpc/myRpc/build/example/caller/CMakeFiles/rebuild_cache.dir

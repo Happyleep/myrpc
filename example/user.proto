@@ -1,0 +1,47 @@
+syntax="proto3";
+
+package user;
+
+// 启用 protoc 生成通用 C++ 服务类（适用于手动实现 RPC 服务时）
+option cc_generic_services=true;
+
+// 可以复用于所有服务响应，利于错误码统一管理。
+message ResultCode
+{
+    int32 errcode=1;
+    bytes errmsg=2;
+}
+message LoginRequest
+{
+    bytes name=1;
+    bytes pwd=2;
+}
+message LoginResponse
+{
+    ResultCode result=1; // 通用返回码结构
+    bool success=2;
+}
+message RegisterRequest
+{
+    uint32 id=1;
+    bytes name=2;
+    bytes pwd=3;
+}
+message RegisterResponse
+{
+    ResultCode result=1;
+    bool success=2;
+}
+
+// 定义服务接口 UserServiceRpc就是服务(对象)名。Login和Register是方法名
+service UserServiceRpc
+{
+    rpc Login(LoginRequest) returns(LoginResponse);
+    rpc Register(RegisterRequest) returns(RegisterResponse);
+}
+
+// UserService是继承自UserServiceRpc，
+// 而UserServiceRpc又是继承自google::protobuf::Service类
+
+// callee接收来自caller的请求服务方法，
+// callee根据服务方法名从m_serviceMap中定位到caller请求的服务对象及方法对象，然后进行调用。

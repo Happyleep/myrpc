@@ -1,0 +1,12 @@
+syntax="proto3";
+package rpc;
+
+// 自定义的RPC头部，在实际protobuf数据前预先传输这段头部信息
+// 以便服务器知道调用哪个服务中的哪个方法，
+// 以及读取多少字节作为实际ptotobuf数据
+message RpcHeader
+{
+    bytes service_name=1; //服务名 ，例如 UserService
+    bytes method_name=2; // 方法名 例如 Login
+    uint32 args_size=3; // 参数的字节长度，用于流式传输数据包分隔
+}
